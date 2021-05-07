@@ -3,18 +3,7 @@
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Started",
-		"pipelines": [
-			{
-				"pipelineReference": {
-					"referenceName": "Seeq_Feature_Copy",
-					"type": "PipelineReference"
-				},
-				"parameters": {
-					"windowStart": "@{addhours(trigger().scheduledTime, -24)}",
-					"windowEnd": "@trigger().scheduledTime"
-				}
-			}
-		],
+		"pipelines": [],
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
