@@ -23,7 +23,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     end_time = req_body.get('end')
     try:
         logging.info('Logging into Seeq')
-        spy.login(url="https://explore.seeq.com/", access_key=access_key, password=pass_key, ignore_ssl_errors=True)
+        spy.login(url="<your_server>", access_key=access_key, password=pass_key, ignore_ssl_errors=True)
     except RuntimeError as e:
         return func.HttpResponse(body = json.dumps("error: Error Logging into Seeq: " + str(e) + "}"), status_code=400)
     logging.info('Logged in. Starting search.')
