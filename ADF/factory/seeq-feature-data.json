@@ -1,0 +1,9 @@
+{
+	"name": "seeq-feature-data",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "afc450af-bdcf-4a19-aa13-01db349e0a05",
+		"tenantId": "59c34274-1c79-484b-8ed6-71174050b6d6"
+	}
+}

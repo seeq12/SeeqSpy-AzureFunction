@@ -1,0 +1,16 @@
+{
+	"name": "SourceDataset_r5i",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Seeq",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "ODataResource",
+		"schema": [],
+		"typeProperties": {
+			"path": "Sherwin_Williams_Demo_Export_Max_Temperature_per_Batch_88BC670E_DB59_4059_B22B_9EDC5AC1738A_DataSet"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

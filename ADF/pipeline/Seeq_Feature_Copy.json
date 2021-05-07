@@ -1,0 +1,69 @@
+{
+	"name": "Seeq_Feature_Copy",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_r5i",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "Sherwin_Williams_Demo_Export_Add_Context_FDDFADAD_8593_40D6_9F8A_094CE2EA37AB_DataSet"
+					},
+					{
+						"name": "Destination",
+						"value": "//"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "ODataSource"
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings",
+							"copyBehavior": "PreserveHierarchy"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"validateDataConsistency": false
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_r5i",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_r5i",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"parameters": {
+			"windowStart": {
+				"type": "String"
+			},
+			"windowEnd": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2021-05-07T14:23:54Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

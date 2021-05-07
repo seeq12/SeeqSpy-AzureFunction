@@ -1,0 +1,39 @@
+{
+	"name": "SpyPull",
+	"properties": {
+		"activities": [
+			{
+				"name": "SpyPull",
+				"type": "AzureFunctionActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"functionName": "seeq-search",
+					"method": "POST",
+					"body": {
+						"search-params": "https://explore.seeq.com/workbook/9FE57C17-0C2F-470E-9411-C7817686D28B/worksheet/E2FB003F-0975-421E-9FD9-C0E91EBB38F9",
+						"grid": "15m",
+						"key": "86Cltb-nTTm9_xIr68GW8w",
+						"secret": "zJ6agkIm9x7RweuiJ3xv54CuOKJzcx",
+						"start": "2020-11-23",
+						"end": "2021-02-22"
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "SpyPullFunction",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-05-07T14:56:37Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

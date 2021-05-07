@@ -1,0 +1,21 @@
+{
+	"name": "DestinationDataset_r5i",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "FeatureStore_DataLake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "seeq",
+				"fileSystem": "features"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
